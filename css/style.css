@@ -11,7 +11,7 @@
       --bg_secondary__main: rgba(217, 217, 217, .1);
       --bg_secondary__alt: rgba(60, 8, 184, 0.164);
       --fg_primary: #fff;
-      --fg_highligth: #1eb933;
+      --fg_highligth: #0cb923;
       --fg_secondary: rgb(151, 16, 16);
 
       --font_main: "Montsarrat";
@@ -141,8 +141,32 @@ p{
 footer{
         text-align: center;
        }
+       .main-header {
+        display: flex;
+        align-items: center;
+        justify-content: center
+}
+
+       /* smartphone-portrait  */
+
+@media (max-width: 480px){
+       nav ul {
+        display: flex;
+        align-items: center;
+       }
+}
 
        /* layout - Responsividades*/
+
+.is-active, li a{
+       margin-top: calc(var(--size__xs)*-1);
+}
+li a, .is-active a {
+    border-bottom: var(--size__xs) solid var(--bg_secondary__main);
+    padding-bottom: var(--size_sm);
+    font-weight: 700;
+}
+
 body > *{
     padding: var(--size_lg);
 }
@@ -153,14 +177,22 @@ body > * > *{
     margin: var(--size_sm);
 }
 .call-to-action{
-    margin: var(--size_lg) 0;
+    margin: var(--size_xs) 0;
+    padding: var(--size_lg) auto;
+    display: inline-block;
+    
 }
-ul {
+figure{
+    margin: var(--size_md);
+    text-align: center;
+}
+nav ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
     align-items: center;
-    padding: 18px;
+    padding: 35px;
+
 }
 .call-to-action {
     --green: #1BFD9C;
